@@ -1,0 +1,299 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Roboto',sans-serif;
+    color:#666;
+
+}
+.blacky{
+color:black;
+margin-bottom: 0.8em;
+}
+nav{
+    /* background-color: rgba(75, 47, 47, 1); */
+    /* color:white; */
+    color:#918521;
+    font-family: 'Lato',sans-serif;
+    background-color:#323435;
+    font-size:25px;
+    padding:12px 0px;
+    position:fixed;
+    z-index:100;
+    left: 0;
+    width:100%;
+}
+.mycontainer{
+    max-width:1170px;
+    padding: 0px 10px;
+    margin:auto;
+}
+nav>div{
+    display: flex;
+    justify-content: space-between;
+}
+nav p:last-child{
+    display:none;
+}
+nav ul li{
+    list-style:none;
+    display: inline;
+    font-size: 19px;
+    padding:10px 5px;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+nav ul li span{
+    visibility: hidden;
+}
+/* banner */
+.banner{
+    min-height:83vh;
+    color:white;
+    padding-top:100px;
+    font-size:17px;
+    position: relative;
+}
+.banner .mybg{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/wines.jpg');
+    background-size:cover;
+    z-index: -1;
+}
+.banner p,footer p{
+    margin-top: 20px;
+    max-width:50vw;
+}
+.banner button{
+    padding:10px 30px;
+    background-color: #9e9228;
+    color:white;
+    font-weight: bolder;
+    border:none;
+    font-size: 19px;
+    margin-top: 40px;
+}
+/* welcome  */
+.welcome,.partners{
+    background-color:rgba(0,0,0,0.08);
+    padding:60px 0px;
+}
+.welcome .mycontainer{
+    display: flex;
+
+}
+.welcome .mycontainer>div{
+    flex:1;
+}
+.welcome  p,.welcome ul{
+   margin-top:30px; 
+   padding-right:10px;
+}
+.welcome p{
+    line-height:25px;
+}
+.welcome li{
+    margin-bottom: 10px;
+    margin-left: 24px; 
+
+}
+.welcome .mycontainer>div:last-child img{
+    height: 390px;
+    width: 90%;
+}
+/* special */
+.special{
+    padding:50px 0px;
+}
+.special h2{
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.special>div{
+    display: flex;
+    justify-content: space-around;
+}
+.special>div>div{
+    flex-basis:24%;
+    text-align: center;
+    padding:10px;
+}
+.special>div>div:hover{
+    background-color: #EBEBEB;
+    cursor: pointer;
+}
+.special>div img{
+    height: 220px;
+    /* width:100px; */
+    /* border-radius: 50%; */
+
+}
+.special p,.partners_div p{
+    line-height: 20px;
+    margin-bottom:1em;
+    font-size:17px;
+}
+.special button{
+    font-size:17px;
+    background-color:#C2B32F;
+    color:white;
+    padding:13px 25px;
+    border:none;
+    text-align: center;
+}
+.special button:hover{
+    background-color:#918518;
+
+}
+
+/* .partners */
+.partners_div{
+    text-align: center;
+    display: inline-block;
+    padding:10px;
+}
+.partners_div:last-child{
+    margin-left:50px;
+}
+.partners_div img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+} 
+/* sakti */
+.sakti{
+    background-size: cover;
+    background-position: bottom;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../images/wines.jpg');
+    color:rgb(247, 244, 244);
+    min-height: 30vh;;
+    padding:80px 5px;
+    position: relative;
+}
+.sakti h3{margin-bottom:1em;}
+/* position */
+.signIn_div{
+    width:300px;
+    min-height: 450px;
+    position: absolute;
+    right: 50px;
+    bottom:60px;;
+    background-color: white;
+} 
+.signIn_div h2{
+    padding:20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(194, 179, 47);
+    color:white;
+}
+.signIn_div input,textarea,.signIn_div button{
+    width: 100%;
+    border:none;;
+    border-radius: 3px;
+    padding:5px;
+    margin-bottom:15px;
+    font-size: 17px;
+    background-color:rgba(0,0,0,0.08);
+}
+.signIn_div>div{
+    padding:20px;
+    color:black;
+}
+.signIn_div button{
+    background-color:rgb(212, 38, 38);
+    color:white;
+}
+
+footer{
+    background-color: rgb(32, 30, 30);
+    color:white;
+    padding:20px 0px;
+    text-align: center;
+}
+footer a{
+    color:red;
+}
+
+
+/* responsive */
+@media(max-width:800px){
+    nav p:last-child{
+        display: block;
+    }
+    nav ul{
+        background-color:#323435;
+        position:absolute;
+        top:49px;
+        right:0;
+        width:40vw;
+        min-height: 100vh;;
+        padding:10px;
+        right:-50vw;
+        transition: 0.7s;
+    }
+    nav p:last-child span:last-child{
+        display:none;
+    }
+    nav p span:hover{
+        color:rgb(212, 158, 56);
+        cursor: pointer;
+    }
+    nav ul li span{
+        float:right;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li:hover{
+        background-color: #4c5153;
+    }
+    nav ul li span{
+        visibility: visible;
+    }
+    .banner{
+        text-align:center
+    }
+    .banner p{
+        max-width: 100vw;
+    }
+    .welcome .mycontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+    }
+    .welcome .mycontainer>div:first-child{
+    order: 2;
+    text-align: justify;
+    }
+    .special>div,.customer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .customer h2{
+        text-align: center;
+    }
+    .customer .customer_div{
+        display: block;;
+    }
+
+}
+@media(max-width:1100px){
+    .signIn_div{
+        display:none;
+    }
+}
